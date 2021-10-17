@@ -14,3 +14,8 @@ html, body{
  .flex-container{
    display:flex;
  }
+
+section, aside, div {
+   padding:20px;
+   border-radius: 12px;
+}
