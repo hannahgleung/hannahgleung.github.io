@@ -3,3 +3,8 @@
 html, body{
   background-color: #547f9c;
 }
+
+.header {
+  height:1000px;
+  background-color:blueviolet;
+}
