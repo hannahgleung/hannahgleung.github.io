@@ -16,6 +16,7 @@ html, body{
  }
 
 section, aside, div {
+   background-color: chartreuse;
    padding:20px;
    border-radius: 12px;
 }
