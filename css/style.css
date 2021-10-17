@@ -1,10 +1,10 @@
 @charset "utf-8";
 
-html, body{
-  background-color: #547f9c;
-}
-
 .header {
   height:500px;
   background-color:blueviolet;
 }
+html, body{
+  background-color: #547f9c;
+}
+
