@@ -4,12 +4,15 @@
 html, body{
   background-color: #547f9c;
   margin:0;
+  padding:0;
 }
 
 .header {
   height:100px;
   background-color:blueviolet;
   margin:0;
+  padding:0;
+
 
 }
 
