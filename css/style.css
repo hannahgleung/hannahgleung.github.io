@@ -15,11 +15,11 @@ body {
   margin-top: 0;
 }
 
- .flex-container { 
+.flex-container { 
    display:flex;
 }
 
-  section, aside {
+section, aside {
    height: 50px;
    width: 70px;
    background-color: white;
@@ -31,7 +31,7 @@ body {
 .left {
   float:left;
   width: 50%;
-  background-color: tomato;
+  background-color: red;
 }
 
 .right {
