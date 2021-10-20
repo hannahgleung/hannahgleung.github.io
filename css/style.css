@@ -23,6 +23,11 @@ body {
   margin-top: 0;
 }
 
+.logo {
+  padding-left: 4%;
+  padding-top: 2%;
+}
+
 .header-title {
   display: block;
   font-size: 2rem;
@@ -35,14 +40,6 @@ body {
    text-align: center;
 }
 
-.projects {
-  border-radius: 20px;
-  min-height: 43vw;
-  width: 43%;
-  display: inline-block;
-  margin-bottom: 2%;
-}
-   
 .hero-home {
   min-height: 500px;
   text-align: center;
@@ -53,13 +50,30 @@ body {
   margin-top: 200px;
 }
 
+.projects {
+  border-radius: 50px;
+  min-height: 43vw;
+  width: 43%;
+  display: inline-block;
+  margin-bottom: 2%;
+}
+
+.project-windows {
+  border-radius: 50px;
+  display: inline-block;
+  height: auto; 
+  width: auto; 
+  max-width: 545px; 
+  max-height: 545px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
 .left {
-  background-color: grey;
   margin-right: 1%;
 }
 
 .right {
-  background-color: grey;
   margin-left: 1%;
 }
 
@@ -69,7 +83,7 @@ body {
   background-color: white;
   padding-left: 5%;
   padding: 6%;
-  padding-top: 10%;
+  padding-top: 10%; 
 }
 
 .contact-heading {
