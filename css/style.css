@@ -6,7 +6,6 @@
   }
 }
 
-
 html, body {
   height:100%;
   width:100%;
@@ -20,7 +19,6 @@ body {
 
 .header {
   min-height: 20px;
-  background-color: white;
   margin-top: 0;
 }
 
