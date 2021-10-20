@@ -77,15 +77,31 @@ body {
   margin-left: 1%;
 }
 
-.contact-details {
+.contact-box {
   display: inline-block;
-  min-height: 300px;
-  background-color: white;
+  min-height: 100px;
+  min-width: 88%;
+  background-color: #939393;
   padding-left: 5%;
   padding: 6%;
-  padding-top: 10%; 
+  margin-top: 50px;
+  color: white;
 }
 
 .contact-heading {
   text-align: right;
+  color: white;
+}
+
+.email {
+  padding-top: 50px
+}
+
+.cv-link {
+  padding-top: 10px
+}
+
+.contact-right {
+  display: block;
+  text-align: middle;
 }
