@@ -1,0 +1,17 @@
+.projects {
+  border-radius: 50px;
+  min-height: 43vw;
+  width: 43%;
+  display: inline-block;
+  margin-bottom: 2%;
+}
+
+.left {
+  background-color: grey;
+  margin-right: 1%;
+}
+
+.right {
+  background-color: grey;
+  margin-left: 1%;
+}
