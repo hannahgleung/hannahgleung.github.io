@@ -47,6 +47,8 @@ body {
 .hero-home {
   min-height: 500px;
   text-align: center;
+  padding-top: 60px;
+
 }
 
 .hero-content {
@@ -110,4 +112,10 @@ body {
 .copyright {
   padding-top: 50px;
   text-align: left;
+}
+
+.dot-vintage, .hikely, .lingo-connect {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
