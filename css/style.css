@@ -18,13 +18,18 @@ body {
 }
 
 .header {
+  padding-top: 20px;
   min-height: 20px;
   margin-top: 0;
+  padding-left: 6%;
+  width: 200px; 
+  z-index: 10; 
+  position: fixed; 
 }
 
 .logo {
-  padding-left: 4%;
-  padding-top: 2%;
+  border-radius: 50%;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header-title {
