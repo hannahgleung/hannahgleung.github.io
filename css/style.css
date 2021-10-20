@@ -6,6 +6,7 @@
   }
 }
 
+
 html, body {
   height:100%;
   width:100%;
@@ -79,17 +80,18 @@ body {
 
 .contact-box {
   display: inline-block;
-  min-height: 100px;
+  min-height: 90px;
   min-width: 88%;
   background-color: #939393;
   padding-left: 5%;
   padding: 6%;
   margin-top: 50px;
   color: white;
+  text-align: center;
 }
 
 .contact-heading {
-  text-align: right;
+  text-align: center;
   color: white;
 }
 
@@ -97,11 +99,12 @@ body {
   padding-top: 50px
 }
 
-.cv-link {
-  padding-top: 10px
-}
-
 .contact-right {
   display: block;
   text-align: middle;
+}
+
+.copyright {
+  padding-top: 50px;
+  text-align: left;
 }
