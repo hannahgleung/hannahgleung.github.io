@@ -52,8 +52,12 @@ body {
 }
 
 .hero-content {
-  display: inline-block;
+  display: block;
   margin-top: 200px;
+}
+
+.intro {
+  max-width: 100%;
 }
 
 .projects {
