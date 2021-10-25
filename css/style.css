@@ -77,13 +77,12 @@ body {
 
 .intro-text {
   position: absolute;
-  top: 200px;
+  top: 16vw;
   left: 800px;
   font-size: 25px;
   text-align: left;
   font-weight: lighter;
 }
-
 
 .projects {
   border-radius: 50px;
