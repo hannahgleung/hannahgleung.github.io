@@ -111,19 +111,18 @@ body {
   min-height: 10%;
   min-width: 10%;
   background-color: #939393;
-  padding-left: 5%;
-  padding: 6%;
+  padding: 4%;
   margin-top: 50px;
   color: white;
   text-align: center;
   border-radius: 50%; 
   box-align: center;
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   align-content: center;
 }
 
-.content-wrapper {
+.contact-wrapper {
   text-align: center;
 }
 
@@ -135,7 +134,7 @@ body {
 }
 
 .email {
-  padding-top: 50px
+  padding-top: 60px
 }
 
 .contact-details {
