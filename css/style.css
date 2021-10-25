@@ -60,6 +60,15 @@ body {
   max-width: 100%;
 }
 
+.intro-text {
+  position: absolute;
+  top: 120px;
+  right: 150px;
+  font-size: 50px;
+  font-weight: bold;
+  word-wrap: normal;
+}
+
 .projects {
   border-radius: 50px;
   min-height: 43vw;
@@ -112,6 +121,8 @@ body {
 .contact-heading {
   text-align: center;
   color: white;
+  font-weight: bold;
+  font-size: larger;
 }
 
 .email {
@@ -146,6 +157,7 @@ a:hover {
   margin-left: 4%;
   text-align: left;
   color: #939393;
+  font-size: small;
 }
 
 .dot-vintage, .hikely, .lingo-connect {
