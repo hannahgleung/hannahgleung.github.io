@@ -104,6 +104,7 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
+  margin-top: 5vw;
 }
 
 .about-heading {
@@ -112,7 +113,8 @@ body {
   word-break: break-word;
   text-align: left;
   font-weight: bold;
-  margin-right: 2vw;
+  margin-left: 1vw;
+  align-content: left;
 }
 
 .about-text {
@@ -120,8 +122,8 @@ body {
   font-size: 20px;
   font-weight: lighter;
   text-align: left;
-  margin-left: 2vw;
-  max-width: 300px;
+  margin-left: 21vw;
+  max-width: 400px;
 }
 
 .contact-box {
