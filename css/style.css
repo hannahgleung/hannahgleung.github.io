@@ -32,13 +32,6 @@ body {
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.header-title {
-  display: block;
-  font-size: 2rem;
-  padding-left: 4%;
-  padding-top: 2%;
-}
-
 .flex-container { 
    display: block;
    text-align: center;
@@ -104,6 +97,29 @@ body {
 
 .right {
   margin-left: 1%;
+}
+
+.about {
+  display: inline-block;
+}
+
+.about-heading {
+  display: inline-block;
+  font-size: 50px;
+  word-break: break-word;
+  text-align: left;
+  font-weight: bold;
+  margin-left: 15vw;
+}
+
+.about-text {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: left;
+  margin-left: 24vw;
+  margin-top: 4vw;
+
 }
 
 .contact-box {
