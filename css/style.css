@@ -45,9 +45,10 @@ body {
 }
 
 .hero-home {
-  min-height: 500px;
+  min-height: 200px;
   text-align: center;
   padding-top: 60px;
+  margin-bottom: 100px;
 }
 
 .intro-image {
