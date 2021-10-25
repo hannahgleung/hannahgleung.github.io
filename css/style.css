@@ -61,14 +61,14 @@ body {
   border-radius: 50%;
   max-height: 25%;
   max-width: 25%;
-  margin-top: 100px;
-  margin-left: 350px;
+  margin-top: 8vw;
+  margin-left: 27vw;
 }
 
 .intro-heading {
   position: absolute;
-  top: 200px;
-  left: 200px;
+  top: 16vw;
+  left: 15vw;
   font-size: 50px;
   word-break: break-word;
   text-align: left;
@@ -78,7 +78,7 @@ body {
 .intro-text {
   position: absolute;
   top: 16vw;
-  left: 800px;
+  left: 60vw;
   font-size: 25px;
   text-align: left;
   font-weight: lighter;
