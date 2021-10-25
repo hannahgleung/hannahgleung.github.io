@@ -121,7 +121,24 @@ body {
 .contact-details {
   display: block;
   text-align: middle;
+}
+
+a:link {
   color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: lightblue;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 .copyright {
