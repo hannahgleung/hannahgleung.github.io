@@ -56,8 +56,14 @@ body {
   margin-top: 200px;
 }
 
-.intro {
-  max-width: 100%;
+.intro-image {
+  display: inline-block;
+  align-content: left;
+  border-radius: 50%;
+  max-height: 25%;
+  max-width: 25%;
+  margin-top: 100px;
+  margin-right: 15px;
 }
 
 .intro-text {
@@ -110,8 +116,7 @@ body {
   box-align: center;
   width: 200px;
   height: 200px;
-
-
+  align-content: center;
 }
 
 .content-wrapper {
