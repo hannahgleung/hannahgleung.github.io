@@ -56,7 +56,7 @@ body {
 .intro-heading {
   position: absolute;
   top: 16vw;
-  left: 15vw;
+  left: 13vw;
   font-size: 50px;
   word-break: break-word;
   text-align: left;
@@ -109,11 +109,12 @@ body {
 
 .about-heading {
   display: inline-block;
-  font-size: 50px;
+  font-size: 30px;
   word-break: break-word;
   text-align: left;
   font-weight: bold;
-  margin-left: 1vw;
+  margin-left: 15vw;
+  margin-right: 2vw;
   align-content: left;
 }
 
@@ -122,8 +123,9 @@ body {
   font-size: 17px;
   font-weight: lighter;
   text-align: left;
-  margin-left: 21vw;
   max-width: 400px;
+  margin-left: 10vw;
+  margin-right: 18vw;
 }
 
 .contact-box {
