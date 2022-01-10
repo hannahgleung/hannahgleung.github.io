@@ -35,7 +35,7 @@ h3 {
 
 .sub_headings {
   font-weight: 700;
-  color: #40798c;
+  color: #1f363d;
 }
 
 img {
@@ -166,28 +166,27 @@ main {
 
 #about h3 {
   text-align: center;
-  color: #fff;
+  color: #545454;
 }
 
 #about ul {
   list-style-type: none;
   padding: 0 15px;
   text-align: center;
-  color: #fff;
+  color: #545454;
 }
 
 #contact .contact_box {
-  background-color: #fff;
+  background-color: #545454;
   border-radius: 50%;
   box-shadow: 1px 2px 10px rgb(0 0 0 / 10%);
   display: inline-block;
   padding: 10px;
-  border-radius: 50%;
   width: 270px;
   height: 270px;
   align-content: center;
   margin: 10px;
-  color: #b8cadf;
+  color: #B8CADF;
 }
 
 #contact p {
@@ -266,8 +265,6 @@ dark grey: #D2D2D2
 
 #overview .details {
   display: inline;
-  column-count: 2;
-  column-width: 40px;
   text-align: center;
 }
 
@@ -277,10 +274,6 @@ dark grey: #D2D2D2
 
 .overview_challenge p {
   padding-bottom: 20px;
-}
-
-.sub_headings {
-  color: #1f363d;
 }
 
 .w_container {
@@ -331,10 +324,7 @@ dark grey: #D2D2D2
 
 .background {
   background-color: #ebebeb;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  padding: 10px 20px 5px;
   margin-bottom: 20px;
 }
 
@@ -385,19 +375,19 @@ dark grey: #D2D2D2
 /* BUTTONS */
 
 #about a {
-    text-decoration: underline;
-    color: #000000;
+  text-decoration: underline;
+  color: #000;
 }
 
 #about a:visited {
   text-decoration: underline;
-  color: #000000;
+  color: #000;
 }
 
 #about a:hover,
 a:focus {
   text-decoration: none;
-  background-color: #000000;
+  background-color: #000;
   color: white;
 }
 
@@ -425,7 +415,7 @@ a:focus {
 }
 
 #contact a {
-  color: #939393;
+  color: #fff;
   text-decoration: none;
   font-weight: 400;
 }
@@ -484,23 +474,6 @@ a:focus {
 .button:hover {
   opacity: 0.8;
   background-color: #26c485;
-  color: #fff;
-}
-
-.enular_button {
-  display: inline-block;
-  background-color: #13A3C3;
-  color: #fff;
-  padding: 10px;
-  border-radius: 50px;
-  width: 15%;
-  text-decoration: none;
-  transition: 0.2s opacity;
-}
-
-.enular_button:hover {
-  opacity: 0.8;
-  background-color: #13A3C3;
   color: #fff;
 }
 
@@ -628,7 +601,7 @@ Medium devices (640px and larger)
     margin: 0 -1em;
   }
 
-  #projects h2 {
+  #projects h1 {
     padding-top: 250px;
   }
 
@@ -722,7 +695,7 @@ Medium devices (640px and larger)
 
   .user_stories h3 {
     font-size: 1.5em;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     padding-top: 5px;
   }
 
@@ -772,11 +745,6 @@ Medium devices (640px and larger)
     height: 50px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .user_stories h3 {
-    padding-top: 5px;
-    padding-bottom: 10px;
   }
 
   #project .para {
@@ -854,7 +822,7 @@ Large devices (1024px or larger)
     display: flex;
   }
 
-  #projects h2 {
+  #projects h1 {
     margin-top: 0;
     padding-top: 0;
   }
@@ -1031,13 +999,4 @@ X-large devices (1440px or larger)
 
 .circles_group1 {
   animation: 8s circles_group1 infinite alternate linear;
-}
-
-.dot-vintage, .hikely, .lingo-connect, .crunch {
-    width: 60%;
-    height: 60%;
-    align-content: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
