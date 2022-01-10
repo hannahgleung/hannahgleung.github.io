@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
-    <link rel="icon" type="image/png" href="images/Header/Logo.png" />
-    <link rel="icon" type="image/png" href="images/Header/Logo.png" />
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins">
-    <style>
-        body {
-            font-family: "Poppins";
-        }
-    </style>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/8d82763032.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/header_images/logo.png" />
     <title>
-        Hikely
+        Design by Hannah Leung
     </title>
 </head>
 
 <body>
+    <header>
+        <div class="container">
+            <div class="navtoggle" id="myNavtoggle">
+                <a href="index.html"><img class="logo" src="img/header_images/logo.svg" alt="Logo"></a>
+                <nav class="home_nav">
+                    <ul>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+                        <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i
+                                    class="fas fa-bars"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
 
     <div class="header"> <a href="index.html">
             <img class="logo" src="images/Header/Logo.png" alt="logo">
         </a></div>
 
     <section>
-        <img class="hikely" src="images/Projects/Hikely.png" alt="Hiking app">
+        <img class="hikely" src="img/Projects/Hikely.png" alt="Hiking app">
     </section>
 
-    <div class="contact-wrapper">
-        <section class="contact-box">
-            <span class="contact-heading">Contact Me</span>
-
-            <div class="email">
-                <span>hannahleung9@gmail.com</span>
+    <footer id="contact">
+        <div class="container">
+            <div class="contact_box">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:hannahleung9@gmail.com">Email</a></li>
+                    <li><a href="files/CV21.pdf" target="_blank">CV</a></li>
+                    <li><a href="https://www.linkedin.com/in/hannahgleung/" target="blank">LinkedIn</a></li>
+                    <li><a href="https://www.behance.net/hannahgleung" target="blank">Behance</a></li>
+                </ul>
             </div>
-
-            <div class="contact-details">
-                <span><a href="links/Hannah CV 14 oct 21.pdf" target="_blank">CV</a></span>
+            <div>
+                <p>Copyright Hannah Leung 2021</p>
             </div>
-
-            <div class="contact-details">
-                <span><a href="https://www.linkedin.com/in/hannahgleung/" target="_blank">LinkedIn</a></span>
-            </div>
-
-            <div class="contact-details">
-                <span><a href="https://www.behance.net/hannahgleung" target="_blank">Behance</a></span>
-            </div>
-
-            <div class="contact-details">
-                <span><a href="https://hannahleung3.wixsite.com/portfolio" target="_blank">Fashion portfolio</a></span>
-            </div>
-
-        </section>
-    </div>
-
-    <section class="copyright">
-        <span>copyright Hannah Leung 2021</span>
-    </section>
-    </section>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

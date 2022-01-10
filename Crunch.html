@@ -1,73 +1,388 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
-    <link rel="icon" type="image/png" href="images/Header/Logo.png" />
-    <link rel="icon" type="image/png" href="images/Header/Logo.png" />
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins">
-    <style>
-        body {
-            font-family: "Poppins";
-        }
-    </style>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/8d82763032.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/header_images/logo.png" />
     <title>
-        Crunch
+        Design by Hannah Leung
     </title>
 </head>
 
 <body>
-
-    <div class="header"> <a href="index.html">
-            <img class="logo" src="images/Header/Logo.png" alt="logo">
-        </a></div>
-
-    <section>
-        <img class="crunch" src="images/Projects/Crunch Case Study.png" alt="Money saving app">
-    </section>
-
-    <div class="prototype-wrapper">
-        <section class="prototype-button">
-            <span class="protoype-text"><a href="https://xd.adobe.com/view/a79753e0-6ddd-4208-a623-04da223acd84-f2c4/"
-                    target="_blank">Prototype</a>
-            </span>
-        </section>
-    </div>
-
-    <div class="contact-wrapper">
-        <section class="contact-box">
-            <span class="contact-heading">Contact Me</span>
-
-            <div class="email">
-                <span>hannahleung9@gmail.com</span>
+        <header>
+            <div class="container">
+                <div class="navtoggle" id="myNavtoggle">
+                    <a href="index.html"><img class="logo" src="img/header_images/logo.svg" alt="Logo"></a>
+                    <nav class="home_nav">
+                        <ul>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+                            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i
+                                        class="fas fa-bars"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
+        </header>
 
-            <div class="contact-details">
-                <span><a href="links/Hannah CV 14 oct 21.pdf" target="_blank">CV</a></span>
+        <main id="project">
+            <section class="project_nav">
+                <div class="container">
+                    <div class="row">
+                        <a href="#overview">Overview</a>
+                        <a href="#5ws">5W's</a>
+                        <a href="#user_stories">User-stories</a>
+                        <a href="#user_flows">User-flows</a>
+                        <a href="#wireframes">Wireframes</a>
+                        <a href="#testing">Testing</a>
+                        <a href="#branding">Branding</a>
+                        <a href="#end_result">End-result</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="crunch_hero">
+                <div class="container">
+                    <div class="row">
+                        <div class="column">
+                            <picture>
+                                <source srcset="img/crunch/case study/small/compressed/hero_mockup_s-min.png"
+                                    media="(max-width:480px)">
+                                <img class="crunch_heroimg"
+                                    src="img/crunch/case study/large/compressed/hero_mockup_l-min.png" alt="Mockup">
+                            </picture>
+                        </div>
+                        <div class="column">
+                            <img class="crunch_logo" src="img/crunch/crunch_logo.svg" alt="Crunch Logo">
+                            <p class="hero_p">Saving made easy, without the stress</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="overview" class="overview">
+                <!--overview-->
+                <div class="container">
+                    <div class="row">
+                        <h2>Overview</h2>
+                        <div class="column">
+                            <picture class="overview_img">
+                                <source srcset="img/crunch/case study/small/compressed/overview_mockup_s-min.jpg"
+                                    media="(max-width:480px)">
+                                <img src="img/crunch/case study/large/compressed/overview_mockup_l-min.jpg"
+                                    alt="overview mockup">
+                            </picture>
+                        </div>
+                        <div class="details column">
+                            <div class="overview_role col-md-6">
+                                <p class="sub_headings">Role</p>
+                                <p>UI Design</p>
+                                <p>UX Research</p>
+                            </div>
+                            <div class="overview_tools col-md-6">
+                                <p class="sub_headings">Tools</p>
+                                <p>Adobe XD</p>
+                            </div>
+                            <div class="overview_tools col-md-6">
+                                <p class="sub_headings">Timeline</p>
+                                <p>Oct - Nov '21</p>
+                            </div>
+                        </div>
+                        <div class="overview_challenge column">
+                            <p class="sub_headings">Challenge</p>
+                            <p class="para">To design an app as a personal project which helps users to save money by
+                                keeping track of their spending from cards & cash to aid them to complete their saving
+                                goals.</p>
+                            <p class="para">The app was designed with a brand design guideline to stay true to the
+                                message
+                                of the app, this was a big consideration in the steps of designing this app.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="5ws" class="ws">
+                <!--user_stories-->
+                <div class="container">
+                    <h2>5w's</h2>
+                    <p class="para">Through questioning who the user will be and the reasons why they should use this
+                        app
+                        aided the process of creating user stories and focusing on the most important aspects Crunch
+                        should
+                        have.
+                    </p>
+                    <div class="row w_box">
+                        <div class="col-md-6 column w_container">
+                            <p class="sub_headings">Who</p>
+                            <p>For people who are looking for assistance to save up money for multiples things.</p>
+                        </div>
+                        <div class="col-md-6 column w_container">
+                            <p class="sub_headings">Where</p>
+                            <p>Used from any device which are linked keeping track through account.</p>
+                        </div>
+                        <div class="col-md-6 column w_container">
+                            <p class="sub_headings">What</p>
+                            <p>Responsive web app and mobile app allowing users to easily record their spending and
+                                saving goals.</p>
+                        </div>
+                        <div class="col-md-6 column w_container">
+                            <p class="sub_headings">When</p>
+                            <p>Users will utilize the tool in a time when they are saving up for an expense/or
+                                multiple.</p>
+                        </div>
+                        <div class="col-md-6 column w_container">
+                            <p class="sub_headings">Why</p>
+                            <p>Offering users personalised saving tips and fit to their amount/time scale.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="user_stories" class="user_stories">
+                <div class="container">
+                    <h2>User Stories</h2>
+                    <div class="row numbers">
+                        <div class="col-md-6 column story">
+                            <h3 class="circle">1</h3>
+                            <p>As a money-saver, I need to be able to input information on the money I am receiving and
+                                spending(and on what), so that I can see an overview of my finances.
+                            </p>
+                        </div>
+                        <div class="col-md-6 column story">
+                            <h3 class="circle">2</h3>
+                            <p>As a user, I want to see a dashboard of my finances clearly and visually,so that I can
+                                see
+                                how much I am spending on what at a glance.</p>
+                        </div>
+                        <div class="col-md-6 column story">
+                            <h3 class="circle">3</h3>
+                            <p>As a user, I need to be able to tell the tool what my savings goal is and how long I have
+                                to
+                                reach it, so that I can save accordingly.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="user_flows" class="user_flows">
+                <div class="container">
+                    <h2>User Flows</h2>
+                    <div class="row">
+                        <p class="para">By taking the main user stories I have chosen to include in my screen I then
+                            translated these stories into one flow planning the screens.</p>
+                        <p class="para">Choosing the most important screens and defining them here helped the process
+                            all
+                            the way to my final screens.</p>
+                        <picture>
+                            <source srcset="img/crunch/case study/small/compressed/user_flow_s-min.jpg"
+                                media="(max-width:480px)">
+                            <img src="img/crunch/case study/large/compressed/user_flow_l-min.jpg" alt="User-flow">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section id="wireframes" class="wireframes">
+                <!--wireframes-->
+                <div class="container">
+                    <h2>Low Fidelity Sketches</h2>
+                    <div class="row low_fid background">
+                        <div class="column">
+                            <p class="col-md-6">Taking the user flow I then quickly sketched basic layout ideas and
+                                processes of the most important screens. I decided to try and keep the amount of screens
+                                simple and for every decision made to have a purpose.</p>
+                            <p class="col-md-6">With these initial low fidelity sketches I then moved straight to
+                                digital to
+                                keep momentum and get onto testing designs.</p>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="img/crunch/case study/small/compressed/low_fid_s-min.jpg"
+                            media="(max-width:480px)">
+                        <img src="img/crunch/case study/large/compressed/low_fid_l-min.jpg" alt="Low fidelity sketches">
+                    </picture>
+                </div>
+            </section>
+            <section id="testing" class="testing">
+                <!--testing-->
+                <div class="container">
+                    <h2>Mid Fidelity Usability Testing</h2>
+                    <div class="background row">
+                        <!--mid fidelity-->
+                        <div class="column">
+                            <p class="para">I had 4 participants test my prototype of mid fidelity screens. The comments
+                                were the main pain points they highlighted that I took forward and applied these changes
+                                to
+                                the screens.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="scenario column">
+                            <p class="sub_headings">Scenario:</p>
+                            <p class="para">New user looking to sign up to Crunch adding their bank accounts, viewing
+                                the
+                                dashboard showing an overview of their spending and savings.</p>
+                            <p class="para">Furthermore being able to view specific insights for their savings and
+                                expenditures alongside being able to add manual spending and saving goals.</p>
+                        </div>
+                        <picture>
+                            <source srcset="img/crunch/case study/small/compressed/.jpg" media="(max-width:480px)">
+                            <img src="img/crunch/case study/large/compressed/mid_fidelity_testing_l-min.jpg"
+                                alt="Mid fidelity testing">
+                        </picture>
+                    </div>
+
+                    <div class="row">
+                        <!--greyscale high-->
+                        <h2>Greyscale High Fidelity Post Feedback</h2>
+                        <div class="row">
+                            <div class="column background">
+                                <p class="para">Testing early on before the application of any brand design guidelines
+                                    aided
+                                    the processto make sure the user journey was the best it could be. The majority of
+                                    changes from the issues found by users involved aspects which were not clear enough.
+                                </p>
+                                <p class="para">I would definitely take this forward to other projects in the future and
+                                    applying a fresh mind to avoid confusing designs.</p>
+                            </div>
+                            <picture>
+                                <source srcset="img/crunch/case study/small/compressed/high_greyscale_s-min.jpg"
+                                    media="(max-width:480px)">
+                                <img src="img/crunch/case study/large/compressed/high_greyscale_l-min.jpg"
+                                    alt="Greyscale high fidelity post feedback">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="branding" class="branding">
+                <!--branding-->
+                <div class=" container">
+                    <h2>Creating a brand guideline</h2>
+                    <div class="row">
+                        <div class="branding_p column">
+                            <p class="background para">For this money saving app, I thought of crunch as in money crunch
+                                for
+                                the name and so tried to express this in the "C" design with coins coming out of it
+                                giving
+                                it some sense of light and fun</p>
+                            <p class="para">I want the app to feel sophisticated since it is dealing with big amounts of
+                                money for users and at the same time for users to be relaxed while using the app which
+                                is
+                                the reasoning for the colours I picked. I chose a toned down blue as my primary colour
+                                alongside some complimentary to try make the user feel at ease and that they are using a
+                                trustworthy app.</p>
+                        </div>
+                        <picture>
+                            <source srcset="img/crunch/case study/small/compressed/brand_guidelines_s-min.jpg"
+                                media="(max-width:480px)">
+                            <img src="img/crunch/case study/large/compressed/brand_guidelines_l-min.jpg"
+                                alt="Brand guidelines">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section id="end_result" class="end_result">
+                <!--end result-->
+                <div class="container">
+                    <h2>Web Design</h2>
+                    <div class="row">
+                        <div class="column flex">
+                            <picture>
+                                <source srcset="img/crunch/case study/small/compressed/laptop_mock1_s-min"
+                                    media="(max-width:480px)">
+                                <img class="" src="img/crunch/case study/large/compressed/laptop_mock1_l-min.jpg"
+                                    alt="User-flow">
+                            </picture>
+                            <picture>
+                                <source srcset="img/crunch/case study/small/compressed/laptop_mock2_s-min"
+                                    media="(max-width:480px)">
+                                <img class="" src="img/crunch/case study/large/compressed/laptop_mock2_l-min.jpg"
+                                    alt="User-flow">
+                            </picture>
+                        </div>
+                        <div class="web_p column">
+                            <p>It was important for the app's users to be able to access their spending and saving goals
+                                through other devices, which is the reason I have included a design of the home screen
+                                dashboard.</p>
+                            <p> Keeping the dashboard on the website design as simple as possible to mirror the concept
+                                of
+                                the app was important.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="flex background end_mockup">
+                            <div class="column">
+                                <picture>
+                                    <!--png-->
+                                    <source srcset="img/crunch/case study/small/compressed/endresult_left_s-min.png"
+                                        media="(max-width:480px)">
+                                    <img src="img/crunch/case study/large/compressed/endresult_left_l-min.png"
+                                        alt="End result">
+                                </picture>
+                            </div>
+                            <div class="column end_text flex">
+                                <h2>End Result</h2>
+                                <p>To conclude this saving app Crunch, I was really happy with the overall look and feel
+                                    of
+                                    this functional yet simple app. I feel I achieved this through the mix of modern
+                                    design
+                                    pattern I had chosen.</p>
+                                <p>The most useful step during the process was testing on potential users and hearing
+                                    aches
+                                    and pains from similar saving apps. With more allocated time for this app I would
+                                    involve more user testing steps to further strengthen the function.</p>
+                                <p>The main message I learned from this app was to keep as close to the main function I
+                                    am
+                                    trying to communicate with users. And to input the process of less is more.</p>
+                            </div>
+                            <div class="column">
+                                <picture>
+                                    <!--png-->
+                                    <source srcset="img/crunch/case study/small/compressed/endresult_right_s-min.png"
+                                        media="(max-width:480px)">
+                                    <img src="img/crunch/case study/large/compressed/endresult_right_l-min.png"
+                                        alt="End result">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button_box row">
+                    <a href="https://xd.adobe.com/view/78e5f636-2680-4293-a150-80c30dd8df34-2db6" class="button"
+                        target="blank">Prototype</a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer id="contact">
+            <div class="container">
+                <div class="contact_box">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:hannahleung9@gmail.com">Email</a></li>
+                        <li><a href="files/CV21.pdf" target="_blank">CV</a></li>
+                        <li><a href="https://www.linkedin.com/in/hannahgleung/" target="blank">LinkedIn</a></li>
+                        <li><a href="https://www.behance.net/hannahgleung" target="blank">Behance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Copyright Hannah Leung 2021</p>
+                </div>
             </div>
-
-            <div class="contact-details">
-                <span><a href="https://www.linkedin.com/in/hannahgleung/" target="_blank">LinkedIn</a></span>
-            </div>
-
-            <div class="contact-details">
-                <span><a href="https://www.behance.net/hannahgleung" target="_blank">Behance</a></span>
-            </div>
-
-            <div class="contact-details">
-                <span><a href="https://hannahleung3.wixsite.com/portfolio" target="_blank">Fashion portfolio</a></span>
-            </div>
-
-        </section>
-    </div>
-
-    <section class="copyright">
-        <span>copyright Hannah Leung 2021</span>
-    </section>
-
-
-    </section>
-</body>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+    </body>
 
 </html>
