@@ -477,6 +477,57 @@ a:focus {
   color: #fff;
 }
 
+.enular_button {
+  display: inline-block;
+  background-color: #13a3c3;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 25%;
+  text-decoration: none;
+  transition: 0.2s opacity;
+}
+
+.enular_button:hover {
+  opacity: 0.8;
+  background-color: #343664;
+  color: #fff;
+}
+
+.lingoandroid_button {
+  display: inline-block;
+  background-color: #441ce1;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 25%;
+  text-decoration: none;
+  transition: 0.2s opacity;
+}
+
+.lingoandroid_button:hover {
+  opacity: 0.8;
+  background-color: #b8b2d3;
+  color: #441ce1;
+}
+
+.lingoios_button {
+  display: inline-block;
+  background-color: #441ce1;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 25%;
+  text-decoration: none;
+  transition: 0.2s opacity;
+}
+
+.lingoios_button:hover {
+  opacity: 0.8;
+  background-color: #b8b2d3;
+  color: #441ce1;
+}
+
 /* JAVASCRIPT */
 
 .navtoggle li:not(:last-child) {
@@ -1000,3 +1051,5 @@ X-large devices (1440px or larger)
 .circles_group1 {
   animation: 8s circles_group1 infinite alternate linear;
 }
+
+/* other project pages*/
