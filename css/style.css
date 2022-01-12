@@ -117,17 +117,21 @@ main {
 .hero {
   z-index: 1;
   position: relative;
-  margin-top: -125px;
+  margin-top: -70px;
 }
 
 .hero h1 {
   padding-top: 25px;
   text-align: center;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .hero p {
   text-align: center;
-  width: 70%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
