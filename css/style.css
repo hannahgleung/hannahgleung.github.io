@@ -21,6 +21,11 @@ h1 {
   font-size: 1.75em;
   font-weight: 700;
   line-height: 1.6;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
 }
 
 h2 {
@@ -482,6 +487,21 @@ a:focus {
   color: #fff;
 }
 
+.book_button {
+  background-color: #667F2B;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  width: 25%;
+  text-decoration: none;
+  transition: 0.2s opacity;
+  color: #fff;
+
+  &:hover {
+    background-color: #4B5C24;
+  }
+}
+
 .enular_button {
   display: inline-block;
   background-color: #13a3c3;
@@ -491,6 +511,14 @@ a:focus {
   width: 25%;
   text-decoration: none;
   transition: 0.2s opacity;
+
+  &.imo {
+    background-color: #F2829E;
+
+    &:hover {
+      background-color: #C63559;
+    }
+  }
 }
 
 .enular_button:hover {
