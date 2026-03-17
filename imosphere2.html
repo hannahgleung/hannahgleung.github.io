@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="img/header_images/logo.png" />
+  <title>Imosphere — Hannah Leung</title>
+</head>
+
+<body>
+<div class="page-wrap">
+
+  <!-- HEADER — circle + back button, styled via .case-study-header in home.css -->
+  <header class="case-study-header">
+    <a class="logo-dot-static" id="logoDot" href="index.html" aria-label="Home"></a>
+    <a class="back-btn" href="index.html" aria-label="Back to home">
+      <div class="back-arrow">
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none">
+          <line x1="24" y1="8" x2="4" y2="8" stroke="#111" stroke-width="1.5"/>
+          <polyline points="10,2 2,8 10,14" fill="none" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span>back</span>
+    </a>
+  </header>
+
+  <!-- CASE STUDY IMAGE -->
+  <div class="case-study-wrap">
+    <img src="img/Imosphere/case_study/imosphere-rebrand.png" alt="Imosphere Branding Redesign case study">
+  </div>
+
+</div>
+
+<script src="js/scroll.js"></script>
+<script>
+  /* ── CASE STUDY PAGE SCROLL OVERRIDE ──
+     Replaces the zigzag from scroll.js with a
+     straight slow downward movement on this page only. */
+  (function () {
+    const dot = document.getElementById('logoDot');
+    if (!dot) return;
+
+    // Remove the scroll listener scroll.js added and replace it
+    // by redefining updateDotPosition via a new scroll handler
+
+    function getCaseBounds() {
+      const pageWrap = document.querySelector('.page-wrap');
+      const wrapRect = pageWrap ? pageWrap.getBoundingClientRect() : null;
+      const contentLeft = wrapRect ? wrapRect.left + 48 : 96;
+      return {
+        x:    Math.max(8, Math.floor((contentLeft - 52) / 2)), // centred in left margin
+        minY: 28,
+        maxY: window.innerHeight - 72
+      };
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!dot.classList.contains('bouncing')) return;
+
+      const scrollY   = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+
+      const progress = Math.min(scrollY / docHeight, 1);
+      const b = getCaseBounds();
+
+      // X stays fixed in the middle of the left margin — no zigzag
+      dot.style.left = b.x + 'px';
+      // Y moves straight down with scroll progress
+      dot.style.top  = Math.round(b.minY + progress * (b.maxY - b.minY)) + 'px';
+
+    }, { passive: true });
+
+  })();
+</script>
+</body>
+</html>

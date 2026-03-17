@@ -2,369 +2,109 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <script src="https://kit.fontawesome.com/8d82763032.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="img/header_images/logo.png" />
-  <title>
-    Design by Hannah Leung
-  </title>
+  <title>Hannah Leung — UI/UX Designer</title>
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <div class="navtoggle" id="myNavtoggle">
-        <a href="index.html"><img class="logo" src="img/header_images/logo.svg" alt="Logo"></a>
-        <nav class="home_nav">
-          <ul>
-            <li><a href="#uiux">UI/UX</a></li>
-            <li><a href="#illustration">Illustration</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
-            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
-          </ul>
-        </nav>
-      </div>
+<div class="page-wrap">
+
+  <!-- SCROLL HINT — fixed bottom right, fades out on scroll -->
+  <div class="scroll-hint" id="scrollHint">
+    <span>scroll</span>
+    <div class="scroll-arrow">
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+        <line x1="8" y1="0" x2="8" y2="20" stroke="#111" stroke-width="1.5"/>
+        <polyline points="2,14 8,22 14,14" fill="none" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
     </div>
+  </div>
+
+  <!-- HEADER -->
+  <!-- id="logoDot" is required by scroll.js to animate this element -->
+  <header>
+    <a class="logo-dot" id="logoDot" href="index.html" aria-label="Home"></a>
   </header>
 
-  <main>
-    <div class="animation">
-      <picture>
-        <svg xmlns="http://www.w3.org/2000/svg" class="dots" xmlns:xlink="http://www.w3.org/1999/xlink" width="1912"
-          height="106" viewBox="0 0 1912 106">
-          <defs>
-            <filter id="Ellipse_47" x="638" y="49" width="56" height="56" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_44" x="1485" y="49" width="56" height="56" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-2" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-2" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_45" x="1197" y="49" width="56" height="56" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-3" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-3" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_48" x="1856" y="49" width="56" height="56" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-4" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-4" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_40" x="276" y="14" width="91" height="91" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-5" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-5" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_42" x="1217" y="0" width="91" height="91" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-6" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-6" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_44-2" x="463" y="49" width="56" height="56" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-7" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-7" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_46" x="1121" y="49" width="56" height="56" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-8" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-8" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_39" x="913" y="14" width="91" height="91" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-9" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-9" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_43" x="0" y="14" width="91" height="91" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-10" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-10" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_40-2" x="1604" y="14" width="91" height="91" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-11" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-11" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_45-2" x="175" y="50" width="56" height="56" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-12" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-12" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_48-2" x="834" y="50" width="56" height="56" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-13" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-13" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_47-2" x="1660" y="50" width="56" height="56" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-14" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-14" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_41" x="579" y="15" width="91" height="91" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-15" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-15" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-            <filter id="Ellipse_43-2" x="1328" y="15" width="91" height="91" filterUnits="userSpaceOnUse">
-              <feOffset dy="3" input="SourceAlpha" />
-              <feGaussianBlur stdDeviation="3" result="blur-16" />
-              <feFlood flood-opacity="0.161" />
-              <feComposite operator="in" in2="blur-16" />
-              <feComposite in="SourceGraphic" />
-            </filter>
-          </defs>
-          <g id="circles" transform="translate(-45 -199)">
-            <g id="circles_group3" class="circles_group3">
-              <g transform="matrix(1, 0, 0, 1, 45, 199)" filter="url(#Ellipse_47)">
-                <circle id="Ellipse_47-3" data-name="Ellipse 47" cx="19" cy="19" r="19" transform="translate(647 55)"
-                  fill="#939393" opacity="0.45" />
-              </g>
-              <g transform="matrix(1, 0, 0, 1, 45, 199)" filter="url(#Ellipse_44)">
-                <circle id="Ellipse_44-3" data-name="Ellipse 44" cx="19" cy="19" r="19" transform="translate(1494 55)"
-                  fill="#939393" opacity="0.45" />
-              </g>
-              <g transform="matrix(1, 0, 0, 1, 45, 199)" filter="url(#Ellipse_45)">
-                <circle id="Ellipse_45-3" data-name="Ellipse 45" cx="19" cy="19" r="19" transform="translate(1206 55)"
-                  fill="#939393" opacity="0.45" />
-              </g>
-              <g transform="matrix(1, 0, 0, 1, 45, 199)" filter="url(#Ellipse_48)">
-                <circle id="Ellipse_48-3" data-name="Ellipse 48" cx="19" cy="19" r="19" transform="translate(1865 55)"
-                  fill="#939393" opacity="0.45" />
-              </g>
-              <g transform="matrix(1, 0, 0, 1, 45, 199)" filter="url(#Ellipse_40)">
-                <circle id="Ellipse_40-3" data-name="Ellipse 40" cx="36.5" cy="36.5" r="36.5"
-                  transform="translate(285 20)" fill="#b8cadf" opacity="0.45" />
-              </g>
-              <g transform="matrix(1, 0, 0, 1, 45, 199)" filter="url(#Ellipse_42)">
-                <circle id="Ellipse_42-2" data-name="Ellipse 42" cx="36.5" cy="36.5" r="36.5"
-                  transform="translate(1226 6)" fill="#b8cadf" opacity="0.45" />
-              </g>
-            </g>
-            <g id="circles_group2" class="circles_group2">
-              <g transform="matrix(1, 0, 0, 1, 45, 199)" filter="url(#Ellipse_44-2)">
-                <circle id="Ellipse_44-4" data-name="Ellipse 44" cx="19" cy="19" r="19" transform="translate(472 55)"
-                  fill="#939393" opacity="0.45" />
-              </g>
-              <g transform="matrix(1, 0, 0, 1, 45, 199)" filter="url(#Ellipse_46)">
-                <circle id="Ellipse_46-2" data-name="Ellipse 46" cx="19" cy="19" r="19" transform="translate(1130 55)"
-                  fill="#939393" opacity="0.45" />
-              </g>
-              <g transform="matrix(1, 0, 0, 1, 45, 199)" filter="url(#Ellipse_39)">
-                <circle id="Ellipse_39-2" data-name="Ellipse 39" cx="36.5" cy="36.5" r="36.5"
-                  transform="translate(922 20)" fill="#b8cadf" opacity="0.45" />
-              </g>
-              <g transform="matrix(1, 0, 0, 1, 45, 199)" filter="url(#Ellipse_43)">
-                <circle id="Ellipse_43-3" data-name="Ellipse 43" cx="36.5" cy="36.5" r="36.5"
-                  transform="translate(9 20)" fill="#b8cadf" opacity="0.45" />
-              </g>
-              <g transform="matrix(1, 0, 0, 1, 45, 199)" filter="url(#Ellipse_40-2)">
-                <circle id="Ellipse_40-4" data-name="Ellipse 40" cx="36.5" cy="36.5" r="36.5"
-                  transform="translate(1613 20)" fill="#b8cadf" opacity="0.45" />
-              </g>
-            </g>
-            <g id="circles_group1" class="circles_group1" transform="translate(0 1)">
-              <g transform="matrix(1, 0, 0, 1, 45, 198)" filter="url(#Ellipse_45-2)">
-                <circle id="Ellipse_45-4" data-name="Ellipse 45" cx="19" cy="19" r="19" transform="translate(184 56)"
-                  fill="#939393" opacity="0.45" />
-              </g>
-              <g transform="matrix(1, 0, 0, 1, 45, 198)" filter="url(#Ellipse_48-2)">
-                <circle id="Ellipse_48-4" data-name="Ellipse 48" cx="19" cy="19" r="19" transform="translate(843 56)"
-                  fill="#939393" opacity="0.45" />
-              </g>
-              <g transform="matrix(1, 0, 0, 1, 45, 198)" filter="url(#Ellipse_47-2)">
-                <circle id="Ellipse_47-4" data-name="Ellipse 47" cx="19" cy="19" r="19" transform="translate(1669 56)"
-                  fill="#939393" opacity="0.45" />
-              </g>
-              <g transform="matrix(1, 0, 0, 1, 45, 198)" filter="url(#Ellipse_41)">
-                <circle id="Ellipse_41-2" data-name="Ellipse 41" cx="36.5" cy="36.5" r="36.5"
-                  transform="translate(588 21)" fill="#b8cadf" opacity="0.45" />
-              </g>
-              <g transform="matrix(1, 0, 0, 1, 45, 198)" filter="url(#Ellipse_43-2)">
-                <circle id="Ellipse_43-4" data-name="Ellipse 43" cx="36.5" cy="36.5" r="36.5"
-                  transform="translate(1337 21)" fill="#b8cadf" opacity="0.45" />
-              </g>
-            </g>
-          </g>
-        </svg>
-      </picture>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Hi, I'm Hannah</h1>
+    <h1>I design things</h1>
+    <p class="hero-tagline">Check out some of my work</p>
+  </div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="project-grid">
+
+      <a class="project-item" href="imosphere2.html">
+        <img src="img/Imosphere/imosphere2.png" alt="Imosphere">
+      </a>
+
+      <a class="project-item" href="imosphere.html">
+        <img src="img/Imosphere/imosphere.jpg" alt="Imosphere logo">
+      </a>
+
+      <a class="project-item" href="book.html">
+        <img src="img/illustration/book/book.jpg" alt="Book illustration">
+      </a>
+
+      <a class="project-item" href="enular.html">
+        <img src="img/enular/Enular_l.jpg" alt="Enular">
+      </a>
+
+      <a class="project-item" href="lingoconnect.html">
+        <img src="img/lingoconnect/lingoconnect_l.jpg" alt="LingoConnect">
+      </a>
+
+      <a class="project-item" href="hikely.html">
+        <img src="img/hikely/hikely_l.jpg" alt="Hikely">
+      </a>
+
     </div>
+  </section>
 
-    <section class="hero">
-      <div class="hero container">
-        <h1 class="col-lg-8 col-md-4">Hi, I'm Hannah Leung</h1>
-        <p class="col-lg-8 col-md-4">A UI/UX designer with a background in fashion and illustration based in Glasgow,
-          Scotland.</p>
-        <img class="col-lg-8 col-md-4 profile" src="img/header_images/image_me.jpg" alt="picture">
-      </div>
-    </section>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>A bit about me</h2>
+    <p>I'm a Glasgow-based UI/UX designer with roots in fashion and illustration. I love turning complex problems into clean, engaging digital experiences—with a strong focus on detail, usability, and visual storytelling.</p>
+    <p>Alongside UI/UX, I occasionally run Leung Design, creating custom illustrations and wedding stationery. Off-screen, I'm usually outdoors, listening to music, or gaming.</p>
+  </section>
 
-    <section id="projects">
-      <div class="container">
-        <h1>
-          UI/UX
-        </h1>
-        <h4>
-          Real world projects
-        </h4>
-        <div class="col-md-6 column project_link">
-          <picture><a href="enular.html">
-            <source srcset="img/enular/Enular_l.jpg" media="(max-width:1024px)">
-            <img src="img/enular/Enular_l.jpg" alt="Enular">
-          </a></picture>
-        </div>
-        <div class="col-md-6 column project_link">
-          <picture><a href="imosphere.html">
-            <source srcset="img/imosphere/imosphere.jpg" media="(max-width:1024px)">
-            <img src="img/Imosphere/imosphere.jpg" alt="imosphere">
-          </a></picture>
-        </div>
-        <h4>
-          Personal projects
-        </h4>
-        <div class="row">
-          <div class="col-md-6 column project_link">
-            <picture><a href="crunch.html">
-                <source srcset="img/crunch/crunch_s.jpg" media="(max-width:1024px)">
-                <img src="img/crunch/crunch_l.jpg" alt="Crunch">
-              </a></picture>
-          </div>
-          <div class="col-md-6 column project_link">
-            <picture><a href="lingoconnect.html">
-              <source srcset="img/lingoconnect/lingoconnect_s.jpg" media="(max-width:1024px)">
-              <img src="img/lingoconnect/lingoconnect_l.jpg" alt="Lingo Connect">
-            </a></picture>
-          </div>
-          <div class="col-md-6 column project_link">
-            <picture><a href="hikely.html">
-              <source srcset="img/hikely/hikely_s.jpg" media="(max-width:1024px)">
-              <img src="img/hikely/hikely_l.jpg" alt="Hikely">
-            </a></picture>
-          </div>
-          <div class="col-md-6 column project_link">
-            <picture><a href="dotvintage.html">
-              <source srcset="img/dotvintage/dotvintage_s.jpg" media="(max-width:1024px)">
-              <img src="img/dotvintage/dotvintage_l.jpg" alt="Dot Vintge">
-            </a></picture>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>What I can do</h2>
+    <p>UI/UX design: competitor analysis, user research, user flows, wireframes, style guide prototyping</p>
+    <p>Html, CSS &amp; basic Javascript</p>
+    <p>Tools I've used: Figma, Stitch, Photoshop, Illustrator, InDesign, Premiere Pro, Webflow, Claude</p>
+  </section>
 
-    <section id="projects">
-      <div class="container">
-        <h1>
-          Illustration
-        </h1>
-        <div class="row">
-          <div class="col-md-6 column project_link">
-            <picture><a href="book.html">
-                <source srcset="img/illustration/book/book.jpg" media="(max-width:1024px)">
-                <img src="img/illustration/book/book.jpg" alt="book illustration">
-              </a></picture>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container">
-        <div class="row"> 
-          <h1>About</h1>
-          <div class="col-md-6 column">
-            <h2>Fuelled by a lifelong passion for design, I'm dedicated to crafting captivating user interfaces.</h2>
-          </div>
-          <div class="col-md-6 column">
-            <p>Drawing from my <a href= "https://hannahleung3.wixsite.com/portfolio" target="blank">fashion design</a>  background, I've honed my problem-solving skills.</p>
-            <p>Eager to expand my horizons in UI/UX, I'm all about embracing fresh opportunities and forging new connections. Drop me a line—I'm all ears!</p>
-            <p>In my downtime I have an Etsy store <a href= "https://www.etsy.com/uk/shop/LeungDesign" target="blank">Leung Design</a> alongside custom <a href= "https://www.instagram.com/leung_design" target="blank">illustrations/wedding stationery</a> which I do in my freetime,  I enjoy spending time in nature, listening to music, and indulging in a bit of gaming.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="about_box">
-            <div class="col-md-6 col-lg-8 box">
-              <h3>Relevant Skills</h3>
-              <ul>
-                <li>Competitor analysis</li>
-                <li>User research </li>
-                <li>User flows</li>
-                <li>Wireframes</li>
-                <li>Style guides</li>
-                <li>Prototyping</li>
-                <li>html, css & basic javascript</li>
-              </ul>
-            </div>
-            <div class="col-md-6 col-lg-8 box">
-              <h3>Tools</h3>
-              <ul>
-                <li>Adobe XD</li>
-                <li>Photoshop</li>
-                <li>Illustrator</li>
-                <li>Figma</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
+  <!-- FOOTER / CONTACT -->
   <footer id="contact">
-    <div class="container">
-      <div class="contact_box">
-        <h3>Contact</h3>
-        <ul>
-          <li><a href="mailto:hannahleung9@gmail.com">Email</a></li>
-          <li><a href="links/HL-CV-24.pdf" target="_blank">CV</a></li>
-          <li><a href="https://www.linkedin.com/in/hannahgleung/" target="blank">LinkedIn</a></li>
-        </ul>
+    <div class="contact-card">
+      <div class="contact-links">
+        <a href="mailto:hannahleung9@gmail.com" class="contact-link">Email</a>
+        <a href="links/Hannah Leung CV 2026.pdf" class="contact-link">CV</a>
+        <a href="https://www.linkedin.com/in/hannahgleung/" class="contact-link" target="_blank">LinkedIn</a>
       </div>
-      <div>
-        <p>Copyright Hannah Leung 2024</p>
-      </div>
+      <p class="contact-tagline">I'm eager to expand my horizons in UI/UX. I'm all about embracing fresh opportunities and forging new connections. Drop me a line—I'm all ears!</p>
     </div>
+    <p class="copyright">Created by Hannah Leung 2026</p>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="js/scripts.js"></script>
-</body>
 
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
+<script src="js/scroll.js"></script>
+</body>
 </html>
