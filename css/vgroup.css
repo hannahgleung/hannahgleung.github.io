@@ -17,6 +17,12 @@
   transition: opacity 0.55s ease, visibility 0.55s ease;
 }
 
+/* Header floats above the gate overlay so back button is always accessible */
+.case-study-header {
+  position: relative;
+  z-index: 10000;
+}
+
 .gate-overlay.hidden {
   opacity: 0;
   visibility: hidden;
