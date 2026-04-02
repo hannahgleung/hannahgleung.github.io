@@ -8,16 +8,35 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/home.css">
+  <link rel="stylesheet" type="text/css" href="css/vgroup.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="img/header_images/logo.png" />
-  <title>Imosphere — Hannah Leung</title>
+  <title>VGroup — Hannah Leung</title>
 </head>
 
 <body>
 <div class="page-wrap">
 
-  <!-- HEADER — circle + back button, styled via .case-study-header in home.css -->
+  <!-- PASSWORD GATE -->
+  <div class="gate-overlay" id="gateOverlay" role="dialog" aria-modal="true" aria-label="Password protected">
+    <div class="gate-card">
+      <h2>This work is protected</h2>
+      <p>Enter the password to view this case study.</p>
+      <input
+        class="gate-input"
+        id="gateInput"
+        type="password"
+        placeholder="Password"
+        autocomplete="current-password"
+        aria-label="Password"
+      />
+      <p class="gate-error" id="gateError" aria-live="polite"></p>
+      <button class="gate-btn" id="gateSubmit">Enter</button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
   <header class="case-study-header">
     <a class="logo-dot-static" id="logoDot" href="index.html" aria-label="Home"></a>
     <a class="back-btn" href="index.html" aria-label="Back to home">
@@ -31,31 +50,100 @@
     </a>
   </header>
 
-  <!-- CASE STUDY IMAGE -->
+  <!-- TABS BAR -->
+  <div class="tabs-container">
+    <ul class="tabs-bar" role="tablist">
+      <li><button class="tab-btn active" role="tab" aria-selected="true"  aria-controls="panel-1" id="tab-1">App Launcher</button></li>
+      <li><button class="tab-btn"        role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2">ChatODP</button></li>
+      <li><button class="tab-btn"        role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3">Tour Guide Editor</button></li>
+      <li><button class="tab-btn"        role="tab" aria-selected="false" aria-controls="panel-4" id="tab-4">V.Crew Connect</button></li>
+    </ul>
+  </div>
+
+  <!-- CASE STUDY PANELS -->
   <div class="case-study-wrap">
-    <img src="img/vgroup/Vgroup_applauncher.png" alt="Vgroup case study">
+
+    <div class="tab-panel active" id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+      <img src="img/vgroup/Vgroup_applauncher.png" alt="VGroup App Launcher">
+    </div>
+
+    <div class="tab-panel" id="panel-2" role="tabpanel" aria-labelledby="tab-2">
+      <!-- Replace src with your actual image for case study 2 -->
+      <img src="img/vgroup/Vgroup_chatodp.png" alt="ChatODP">
+    </div>
+
+    <div class="tab-panel" id="panel-3" role="tabpanel" aria-labelledby="tab-3">
+      <!-- Replace src with your actual image for case study 3 -->
+      <img src="img/vgroup/Vgroup_tourguideeditor.png" alt="Tour Guide Editor">
+    </div>
+
+    <div class="tab-panel" id="panel-4" role="tabpanel" aria-labelledby="tab-4">
+      <!-- Replace src with your actual image for case study 4 -->
+      <img src="img/vgroup/Vgroup_V.crewconnect.png" alt="V.Crew Connect">
+    </div>
+
   </div>
 
 </div>
 
 <script src="js/scroll.js"></script>
 <script>
-  /* ── CASE STUDY PAGE SCROLL OVERRIDE ──
-     Replaces the zigzag from scroll.js with a
-     straight slow downward movement on this page only. */
+  /* ── PASSWORD GATE ── */
+  const CORRECT_PASSWORD = 'portfolio-casestudy'; // ← change to your password
+
+  const overlay   = document.getElementById('gateOverlay');
+  const input     = document.getElementById('gateInput');
+  const errorMsg  = document.getElementById('gateError');
+  const submitBtn = document.getElementById('gateSubmit');
+
+  function tryUnlock() {
+    if (input.value === CORRECT_PASSWORD) {
+      overlay.classList.add('hidden');
+      errorMsg.textContent = '';
+      sessionStorage.setItem('vgroup_unlocked', '1');
+    } else {
+      errorMsg.textContent = 'Incorrect password. Try again.';
+      input.classList.add('error');
+      input.value = '';
+      setTimeout(() => input.classList.remove('error'), 400);
+      input.focus();
+    }
+  }
+
+  if (sessionStorage.getItem('vgroup_unlocked') === '1') {
+    overlay.classList.add('hidden');
+  } else {
+    setTimeout(() => input.focus(), 300);
+  }
+
+  submitBtn.addEventListener('click', tryUnlock);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') tryUnlock(); });
+
+  /* ── TABS ── */
+  const tabBtns   = document.querySelectorAll('.tab-btn');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+      tabPanels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      document.getElementById(btn.getAttribute('aria-controls')).classList.add('active');
+    });
+  });
+
+  /* ── SCROLL OVERRIDE (straight line, no zigzag) ── */
   (function () {
     const dot = document.getElementById('logoDot');
     if (!dot) return;
-
-    // Remove the scroll listener scroll.js added and replace it
-    // by redefining updateDotPosition via a new scroll handler
 
     function getCaseBounds() {
       const pageWrap = document.querySelector('.page-wrap');
       const wrapRect = pageWrap ? pageWrap.getBoundingClientRect() : null;
       const contentLeft = wrapRect ? wrapRect.left + 48 : 96;
       return {
-        x:    Math.max(8, Math.floor((contentLeft - 52) / 2)), // centred in left margin
+        x:    Math.max(8, Math.floor((contentLeft - 52) / 2)),
         minY: 28,
         maxY: window.innerHeight - 72
       };
@@ -63,21 +151,14 @@
 
     window.addEventListener('scroll', function () {
       if (!dot.classList.contains('bouncing')) return;
-
       const scrollY   = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       if (docHeight <= 0) return;
-
       const progress = Math.min(scrollY / docHeight, 1);
       const b = getCaseBounds();
-
-      // X stays fixed in the middle of the left margin — no zigzag
       dot.style.left = b.x + 'px';
-      // Y moves straight down with scroll progress
       dot.style.top  = Math.round(b.minY + progress * (b.maxY - b.minY)) + 'px';
-
     }, { passive: true });
-
   })();
 </script>
 </body>

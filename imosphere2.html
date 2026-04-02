@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/home.css">
+  <link rel="stylesheet" type="text/css" href="css/vgroup.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="img/header_images/logo.png" />
@@ -17,7 +18,25 @@
 <body>
 <div class="page-wrap">
 
-  <!-- HEADER — circle + back button, styled via .case-study-header in home.css -->
+  <!-- PASSWORD GATE -->
+  <div class="gate-overlay" id="gateOverlay" role="dialog" aria-modal="true" aria-label="Password protected">
+    <div class="gate-card">
+      <h2>This work is protected</h2>
+      <p>Enter the password to view this case study.</p>
+      <input
+        class="gate-input"
+        id="gateInput"
+        type="password"
+        placeholder="Password"
+        autocomplete="current-password"
+        aria-label="Password"
+      />
+      <p class="gate-error" id="gateError" aria-live="polite"></p>
+      <button class="gate-btn" id="gateSubmit">Enter</button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
   <header class="case-study-header">
     <a class="logo-dot-static" id="logoDot" href="index.html" aria-label="Home"></a>
     <a class="back-btn" href="index.html" aria-label="Back to home">
@@ -40,22 +59,48 @@
 
 <script src="js/scroll.js"></script>
 <script>
-  /* ── CASE STUDY PAGE SCROLL OVERRIDE ──
-     Replaces the zigzag from scroll.js with a
-     straight slow downward movement on this page only. */
+  /* ── PASSWORD GATE ── */
+  const CORRECT_PASSWORD = 'portfolio-casestudy';
+
+  const overlay   = document.getElementById('gateOverlay');
+  const input     = document.getElementById('gateInput');
+  const errorMsg  = document.getElementById('gateError');
+  const submitBtn = document.getElementById('gateSubmit');
+
+  function tryUnlock() {
+    if (input.value === CORRECT_PASSWORD) {
+      overlay.classList.add('hidden');
+      errorMsg.textContent = '';
+      sessionStorage.setItem('imosphere2_unlocked', '1');
+    } else {
+      errorMsg.textContent = 'Incorrect password. Try again.';
+      input.classList.add('error');
+      input.value = '';
+      setTimeout(() => input.classList.remove('error'), 400);
+      input.focus();
+    }
+  }
+
+  if (sessionStorage.getItem('imosphere2_unlocked') === '1') {
+    overlay.classList.add('hidden');
+  } else {
+    setTimeout(() => input.focus(), 300);
+  }
+
+  submitBtn.addEventListener('click', tryUnlock);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') tryUnlock(); });
+
+  /* ── SCROLL OVERRIDE ── */
   (function () {
     const dot = document.getElementById('logoDot');
     if (!dot) return;
-
-    // Remove the scroll listener scroll.js added and replace it
-    // by redefining updateDotPosition via a new scroll handler
 
     function getCaseBounds() {
       const pageWrap = document.querySelector('.page-wrap');
       const wrapRect = pageWrap ? pageWrap.getBoundingClientRect() : null;
       const contentLeft = wrapRect ? wrapRect.left + 48 : 96;
       return {
-        x:    Math.max(8, Math.floor((contentLeft - 52) / 2)), // centred in left margin
+        x:    Math.max(8, Math.floor((contentLeft - 52) / 2)),
         minY: 28,
         maxY: window.innerHeight - 72
       };
@@ -63,21 +108,14 @@
 
     window.addEventListener('scroll', function () {
       if (!dot.classList.contains('bouncing')) return;
-
       const scrollY   = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       if (docHeight <= 0) return;
-
       const progress = Math.min(scrollY / docHeight, 1);
       const b = getCaseBounds();
-
-      // X stays fixed in the middle of the left margin — no zigzag
       dot.style.left = b.x + 'px';
-      // Y moves straight down with scroll progress
       dot.style.top  = Math.round(b.minY + progress * (b.maxY - b.minY)) + 'px';
-
     }, { passive: true });
-
   })();
 </script>
 </body>
